@@ -2,6 +2,7 @@
 
 use App\Livewire\User\ProfilIndex;
 use App\Livewire\User\RolePermission;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
