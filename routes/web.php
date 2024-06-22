@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\User\ProfilIndex;
+use App\Livewire\User\RolePermission;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('role-permission', RolePermission::class)->name('role-permission')->lazy();
     Route::get('profil', ProfilIndex::class)->name('profil')->lazy();
 });
